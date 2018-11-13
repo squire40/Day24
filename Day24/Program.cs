@@ -18,11 +18,13 @@ class Solution
         //Write your code here
         if (head == null)
         {
-            return null;
+            return _head;
         }
 
         if (dataList.Count == 0)
         {
+            _head = head;
+
             dataList.Add(head.data);
         }
 
@@ -44,6 +46,7 @@ class Solution
     }
 
     static List<int> dataList = new List<int>();
+    static Node _head;
 
     public static Node insert(Node head, int data)
     {
@@ -85,5 +88,7 @@ class Solution
         }
         head = removeDuplicates(head);
         display(head);
+
+        Console.ReadKey();
     }
 }
